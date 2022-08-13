@@ -1,0 +1,32 @@
+<html>
+
+<head>
+	<title>Student Managment </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div class= "container">
+<div class ="row">
+<h1>List of Students</h1>
+<table class="table table-striped">
+    <thread class = "table.dark">
+      <tr> 
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thread>
+    <tbody>
+    <tr th:each="student: ${students}">
+    <td th:text ="${student.studName}"></td>
+     <td th:text ="${student.stutLastname}"></td>
+    <td th:text ="${student.emailId}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>
